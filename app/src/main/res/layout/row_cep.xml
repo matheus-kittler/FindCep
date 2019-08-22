@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLine1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvUF"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorRow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCEP"
+            android:hint="Cep"
+            android:padding="8dp"
+            android:background="@drawable/border_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="@id/tvLine1"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvPublicPlace"
+            android:hint="Logradouro"
+            android:padding="8dp"
+            android:background="@drawable/border_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCEP"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvComplement"
+            android:hint="Complemento"
+            android:padding="8dp"
+            android:background="@drawable/border_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPublicPlace"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvNeighborhood"
+            android:hint="Bairro"
+            android:padding="8dp"
+            android:background="@drawable/border_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvComplement"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvLocal"
+            android:hint="Localidade"
+            android:padding="8dp"
+            android:background="@drawable/border_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNeighborhood"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvUF"
+            android:hint="UF"
+            android:padding="8dp"
+            android:background="@drawable/border_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLocal"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvLine2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvUF"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorRow"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
