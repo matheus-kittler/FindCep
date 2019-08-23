@@ -140,7 +140,7 @@
                     tools:ignore="NotSibling">
 
                 <EditText
-                        android:id="@+id/etCity"
+                        android:id="@+id/etLocal"
                         android:hint="Localidade"
                         android:editable="true"
                         android:background="@drawable/border_black"
@@ -164,7 +164,7 @@
                     android:layout_marginEnd="10dp"
                     tools:ignore="NotSibling">
                 <EditText
-                        android:id="@+id/etState"
+                        android:id="@+id/etUf"
                         android:hint="UF"
                         android:editable="true"
                         android:background="@drawable/border_black"
@@ -178,6 +178,7 @@
             <Button
                     android:id="@+id/btnSend"
                     android:text="Mandar"
+                    android:visibility="gone"
                     android:textAllCaps="false"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
@@ -189,6 +190,7 @@
             <Button
                     android:id="@+id/btnBack"
                     android:text="Voltar"
+                    android:visibility="gone"
                     android:textAllCaps="false"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"

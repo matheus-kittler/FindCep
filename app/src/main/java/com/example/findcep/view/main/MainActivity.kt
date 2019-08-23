@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             if (address != null) {
                 val a: Address
                 a = address.getSerializableExtra("address") as Address
-                lazyAdapter.editAddress(a, requestCode)
+                lazyAdapter.editAddress(a, address.getIntExtra("index", 0))
             }
         }
     }

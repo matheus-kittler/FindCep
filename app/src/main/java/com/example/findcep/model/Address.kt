@@ -33,8 +33,4 @@ class Address : Serializable {
         this.localidade = localidade
         this.uf = uf
     }
-
-    override fun toString(): String {
-        return super.toString() as String //não faço ideia mas funcionou no ActivityEdit
-    }
 }

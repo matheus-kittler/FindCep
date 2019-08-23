@@ -26,12 +26,14 @@ class AddressActivity : AppCompatActivity(), AddressActivityInteraction {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_address)
 
+
         viewModel = AddressActivityViewModel(this)
 
         etLocalEdit
 
         btnFind.setOnClickListener {
             loadPage()
+            checkFormsForSend()
         }
 
         btnBack.setOnClickListener {
@@ -44,7 +46,7 @@ class AddressActivity : AppCompatActivity(), AddressActivityInteraction {
             address.logradouro = etPublicPlace.text.toString()
             address.complemento = etComple.text.toString()
             address.bairro = etNeighborhood.text.toString()
-            address.uf = etState.text.toString()
+            address.uf = etUf.text.toString()
             intent.putExtra("address", address)
             setResult(Activity.RESULT_OK, intent)
             finish()
@@ -58,9 +60,9 @@ class AddressActivity : AppCompatActivity(), AddressActivityInteraction {
         if (a != null) {
             etPublicPlace.setText(a.logradouro)
             etNeighborhood.setText(a.bairro)
-            etCity.setText(a.localidade) //por algum motivo foi preciso alterar os nomes no xml para setar os do activity_address
+            etLocal.setText(a.localidade) //por algum motivo foi preciso alterar os nomes no xml para setar os do activity_address
             etComple.setText(a.complemento)
-            etState.setText(a.uf)
+            etUf.setText(a.uf)
         }
     }
 
@@ -72,5 +74,15 @@ class AddressActivity : AppCompatActivity(), AddressActivityInteraction {
         rlLoader.visibility = View.VISIBLE
         clForms.visibility = View.GONE
         viewModel.loadAddress(etCep.text.toString())
+    }
+
+    fun checkFormsForSend() {
+        if (etCep != null && etPublicPlace != null && etNeighborhood != null && etLocal != null && etUf != null) {
+            btnSend.visibility = View.VISIBLE
+            btnBack.visibility = View.VISIBLE
+        } else {
+            btnSend.visibility = View.GONE
+            btnBack.visibility = View.GONE
+        }
     }
 }

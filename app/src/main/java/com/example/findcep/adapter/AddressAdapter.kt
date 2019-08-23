@@ -24,7 +24,7 @@ class AddressAdapter : RecyclerView.Adapter<AddressAdapter.AddressViewHolder> {
     }
 
     fun editAddress(address: Address, index: Int) {
-        addresses.set(index, address)
+        addresses[index] = address
         notifyDataSetChanged()
     }
 

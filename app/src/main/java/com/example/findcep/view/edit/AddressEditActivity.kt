@@ -39,7 +39,7 @@ class AddressEditActivity : AppCompatActivity() {
         btnSend.setOnClickListener {
             val intent = Intent(this@AddressEditActivity, MainActivity::class.java)
             address.cep = etCepEdit.text.toString()
-            address.complemento = etComple.text.toString()
+            address.complemento = etComplementEdit.text.toString()
             address.logradouro = etPublicPlaceEdit.text.toString()
             address.bairro = etNeighborhoodEdit.text.toString()
             address.localidade = etLocalEdit.text.toString()
